@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mt-5">
+          <div class="card">
+            <div class="card-header text-center">
+              <b>Tinh BMI</b>
+            </div>
+            <div class="card-body">
+              <input
+                id="ho_va_ten"
+                type="text"
+                placeholder="Nhap Ho Va Ten"
+                class="form-control mt-3"
+              />
+              <input
+                id="can_nang"
+                type="number"
+                placeholder="Nhap Can Nang"
+                class="form-control mt-3"
+              />
+
+              <input
+                id="chieu_cao"
+                type="number"
+                step="0.1"
+                placeholder="Nhap Chieu Cao"
+                class="form-control mt-3"
+              />
+            </div>
+            <div class="card-footer text-end">
+              <button
+                onclick="clickButtonTinhXepLoai()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Tính
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5">
+          <div class="card">
+            <div class="card-header text-center">
+              <b class="text-danger">Thông tin BMI</b>
+            </div>
+            <div class="card-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Chỉ số BMI</th>
+                  <td>
+                    <span id="view_bmi"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Tình Trạng</th>
+                  <td>
+                    <span id="view_tt"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function clickButtonTinhXepLoai() {
+      var weight = document.getElementById("can_nang").value * 1;
+      var height = document.getElementById("chieu_cao").value * 1;
+      console.log(weight);
+      console.log(height);
+      var tk = tinhTongKetBMI(weight, height);
+      var tt = TinhTrangBMI(tk);
+      let result = Math.round(tk * 100) / 100;
+
+      document.getElementById("view_bmi").innerText = result;
+      document.getElementById("view_tt").innerText = tt;
+
+      alert("Tổng kết được " + result + " nên được xếp loai " + xl);
+
+    }
+
+    function tinhTongKetBMI(weight, height) {
+      var BMI = weight / (height * height);
+      return BMI;
+    }
+
+    function TinhTrangBMI(BMI) {
+      if (BMI >= 40) {
+        return "Béo phì độ III";
+      } else if (35 <= BMI) {
+        return "Béo phì độ II";
+      } else if (30 <= BMI) {
+        return "Béo phì độ I";
+      } else if (25 <= BMI) {
+        return "Thừa cân";
+      } else if (18.5 <= BMI) {
+        return "Bình thường";
+      } else if (17 <= BMI) {
+        return "Gầy độ I";
+      } else {
+        return "Gầy độ II";
+      }
+    }
+    log
+  </script>
+</html>

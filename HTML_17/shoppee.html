@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: black;" >
+      <div class="container-fluid flex-column">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler"  
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mt-2 me-5">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Trang chủ
+            </a>
+            </li>
+            <li class="nav-item mt-2 me-5">
+              <a class="nav-link active text-white" href="#">Giới thiệu</a>
+            </li>
+            <li class="nav-item mt-2 me-5">
+              <a class="nav-link active text-white" href="#">Sản Phẩm</a>
+            </li>
+            <li class="nav-item mt-2 me-5">
+              <a class="nav-link active text-white" href="#">Chăm sóc khách hàng</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <hr>
+    <!-- day la code slide -->
+    <div class="container">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="4.png" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="5.png" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+        <div class="alert alert-info mt-2" role="alert">
+            <marquee behavior="" direction="">
+              Chào mừng bạn đã đến với cửa hàng của chúng tôi
+            </marquee>
+           
+          </div>
+          <hr>
+          <table class="table table-bordered">
+            <tr>
+                <th>
+                    <img src="11.png" alt="">Bạch Tuột
+                </th>
+                <th>
+                    <img src="12.png" alt="">Bò Mỹ
+                </th>
+                <th>
+                    <img src="13.png" alt="">Bò Kobe
+                </th>
+                <th>
+                    <img src="14.png" alt="">Hải Sản
+                </th>
+        
+                
+            </tr>
+        </table>
+        <div class="container">
+          
+          <div class="row">
+            <div class="col-3 mt-3">
+              <p><b>Ý kiến của khách hàng</b></p>
+              <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                  
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Họ Và Tên</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập họ và tên">
+                        </div>
+                      <div class="mb-3">
+                          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nhập mail">
+                        </div>
+                      <div class="mb-3">
+                          <label for="exampleFormControlTextarea1" class="form-label">Ý kiến phản hồi</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nhập ý kiến phản hồi"></textarea>
+                        </div>
+                        <div class="class text-end">
+                          <a href="#" class="btn btn-primary">Gửi</a>
+                        </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col-9 mt-3">
+            <p><b>Sản Phẩm</b></p>
+              <div class="row">
+                
+                      <div class="card me-3 d-flex" style="width: 18rem;">
+                          <img src="https://www.nhahangquangon.com/wp-content/uploads/2020/05/tom-alaska.png" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Tôm Alaska</h5>
+                            <p class="card-text">5.000.000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                          </div>
+                        </div>
+                      <div class="card me-3 d-flex" style="width: 18rem;">
+                          <img src="https://bizweb.dktcdn.net/100/237/115/files/thanh-pham-bit-tet.jpg?v=1582191736787" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Bò Né</h5>
+                            <p class="card-text">55.000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                          </div>
+                  </div>
+                      <div class="card me-3 d-flex" style="width: 18rem;">
+                          <img src="https://cdn.tgdd.vn/Files/2021/07/23/1370228/trung-ca-tam-co-cong-dung-gi-vi-sao-trung-ca-tam-co-gia-rat-dat-202107230646219639.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Trứng Cá Tầm</h5>
+                            <p class="card-text">100.000.000 VND</p>
+                            <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                          </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="card me-3 mt-3 d-flex" style="width: 18rem;">
+                      <img src="https://www.nhahangquangon.com/wp-content/uploads/2020/05/tom-alaska.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Tôm Alaska</h5>
+                        <p class="card-text">5.000.000 VND</p>
+                        <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                      </div>
+                    </div>
+                  <div class="card me-3 mt-3 d-flex" style="width: 18rem;">
+                      <img src="https://bizweb.dktcdn.net/100/237/115/files/thanh-pham-bit-tet.jpg?v=1582191736787" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Bò Né</h5>
+                        <p class="card-text">55.000 VND</p>
+                        <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                      </div>
+              </div>
+                  <div class="card me-3 mt-3 d-flex" style="width: 18rem;">
+                      <img src="https://cdn.tgdd.vn/Files/2021/07/23/1370228/trung-ca-tam-co-cong-dung-gi-vi-sao-trung-ca-tam-co-gia-rat-dat-202107230646219639.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Trứng Cá Tầm</h5>
+                        <p class="card-text">100.000.000 VND</p>
+                        <a href="#" class="btn btn-primary">Thêm vào giỏ hàng</a>
+                      </div>
+              </div>
+              
+          </div>
+          </div>
+          
+      </div>
+        </div>
+        
+        <hr>    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+   <!-- phan ket cua web -->
+  <footer class="bg-dark">
+    <div class="container text-white">
+      <div class="row">
+        <div class="col-3 mt-5">
+          <img src="" alt="">
+          <p></p>
+        </div>
+        <div class="col-3 mt-5">
+          <p><h6>PRODUCT</h6></p>
+          <li>
+            <a>
+              Bạch Tuột
+            </a>
+          </li>
+          <li>
+            <a>
+              Bò Mỹ
+            </a>
+          </li>
+          <li>
+            <a>
+              Bò Kobe
+            </a>
+          </li>
+          <li>
+            <a>
+              Hải Sản
+            </a>
+          </li>
+        </div>
+
+        <div class="col-3 mt-5">
+          <p><h6>USEFUL LINKS</h6></p>
+          <li>
+            <a>
+              Trang chủ
+            </a>
+          </li>
+          <li>
+            <a>
+              Giới thiệu
+            </a>
+          </li>
+          <li>
+            <a>
+              Sản phẩm
+            </a>
+          </li>
+          <li>
+            <a>
+              Chăm sóc khách hàng
+            </a>
+          </li>
+          
+        </div>
+
+        <div class="col-3 mt-5">
+
+          <p><h6>CONTACTS</h6></p>
+          <li>
+            <a>
+              32 Xuân Diệu, Đà Nẵng
+            </a>
+          </li>
+          <li>
+            <a>
+              vdinhtrung2004@gmail.com
+            </a>
+          </li>
+          <li>
+            <a>
+              03924057**
+            </a>
+          </li>
+          <li>
+            <a>
+              03924057**
+            </a>
+          </li>
+        </div>
+       
+      </div>
+    </div>
+  </footer>
+</html>

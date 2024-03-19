@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mt-5">
+          <div class="card">
+            <div class="card-header text-center text-primary">
+              <b>Tinh Xep Loai</b>
+            </div>
+
+            <div class="card-body">
+              <input
+                id="chuyen_can"
+                type="number"
+                placeholder="Nhap diem chuyen can"
+                class="form-control"
+              />
+              <input
+                id="giua_ki"
+                type="number"
+                placeholder="Nhap diem giua ki"
+                class="form-control mt-3"
+              />
+              <input
+                id="cuoi_ki"
+                type="number"
+                placeholder="Nhap diem cuoi ki"
+                class="form-control mt-3"
+              />
+            </div>
+            <div class="card-footer text-end">
+              <button
+                onclick="clickButtonTinhXepLoai()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Tinh xep loai
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5">
+          <div class="card">
+            <div class="card-header text-center">
+              <b class="text-danger">THÔNG TIN SINH VIÊN</b>
+            </div>
+            <div class="card-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Điểm Trung Bình</th>
+                  <td>
+                    <span id="view_tb"></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Xếp Loại</th>
+                  <td>
+                    <span id="view_xl"></span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function clickButtonTinhXepLoai() {
+      var cc = document.getElementById("chuyen_can").value * 1;
+      var gk = document.getElementById("giua_ki").value * 1;
+      var ck = document.getElementById("cuoi_ki").value * 1;
+      var tk = tinhTongKet(cc, gk, ck);
+      var xl = xeploai(tk);
+
+      document.getElementById("view_tb").innerText = tk;
+      document.getElementById("view_xl").innerText = "Bạn Xếp Loại " + xl;
+      alert("Tổng kết được " + tk + " nên được xếp loai" + xl);
+    }
+
+    function tinhTongKet(x, y, z) {
+      var a = 0.1 * x + 0.3 * y + 0.6 * z;
+      return a;
+    }
+    console.log(tinhTongKet(x, y, z));
+
+    function xeploai(diem) {
+      if (diem >= 8.5) {
+        return "A";
+      } else if (diem >= 7) {
+        return "B";
+      } else if (diem >= 5.5) {
+        return "C";
+      } else if (diem >= 4.0) {
+        return "D";
+      } else {
+        return "F";
+      }
+    }
+    console.log(XepLoaiDiem(6));
+  </script>
+</html>
